@@ -14,7 +14,7 @@ const Page = () => {
   const title = 'Quiz de Culinária'
 
   const loadNextQuestions = () => {
-    if(questions[currentQuestion + 1]){
+    if (questions[currentQuestion + 1]) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
       setShowResult(true);
@@ -33,19 +33,19 @@ const Page = () => {
   }
 
   return (
-    <div className="w-full h-screen flex justify-center items-center bg-blue-600">
+    <div className="w-full h-screen flex justify-center items-center bg-blue-400 px-5 sm:px-0">
       <div className="w-full max-w-xl rounded-md bg-white text-black shadow shadow-black">
         <div className="p-5 font-bold text-2xl border border-gray-300">{title}</div>
         <div className="p-5">
           {!showResult &&
-            <QuestionItem 
-            question={questions[currentQuestion]}
-            count={currentQuestion + 1}
-            onAnswer={handleAnswered}
-          />
+            <QuestionItem
+              question={questions[currentQuestion]}
+              count={currentQuestion + 1}
+              onAnswer={handleAnswered}
+            />
           }
-          {showResult && 
-            <Results 
+          {showResult &&
+            <Results
               questions={questions}
               answers={answers}
             />
@@ -55,7 +55,7 @@ const Page = () => {
           {!showResult &&
             `${currentQuestion + 1} de ${questions.length} pergunta${questions.length === 1 ? '' : 's'}`
           }
-          {showResult && 
+          {showResult &&
             <button onClick={handleRestartButton} className="px-3 py-2 rounded-md bg-blue-800 text-white cursor-pointer">Reiniciar Quiz</button>
           }
         </div>

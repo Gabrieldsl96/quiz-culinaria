@@ -1,36 +1,118 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Quiz de Culinária
 
-## Getting Started
+Uma aplicação web moderna de quiz interativo construída com Next.js, React e TypeScript. Este projeto apresenta um quiz de culinária com sistema de perguntas e respostas, feedback visual e tela de resultados.
 
-First, run the development server:
+## ✨ Funcionalidades
 
+- 📝 Sistema de perguntas e respostas interativo
+- ✅ Feedback visual imediato (verde para acerto, vermelho para erro)
+- 📊 Tela de resultados com resumo das respostas
+- 🔄 Botão para reiniciar o quiz
+- 📱 Design responsivo (mobile, tablet e desktop)
+- ⚡ Performance otimizada com Next.js
+- 🎨 Interface moderna com Tailwind CSS
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Next.js 15.5.6** - Framework React com App Router
+- **React 19.1.0** - Biblioteca JavaScript para interfaces
+- **TypeScript** - Tipagem estática para JavaScript
+- **Tailwind CSS 4** - Framework CSS utilitário
+- **Geist Font** - Fonte otimizada do Vercel
+
+## 📋 Pré-requisitos
+
+Antes de começar, certifique-se de ter instalado:
+
+- Node.js (versão 18 ou superior)
+- npm, yarn, pnpm ou bun
+
+## 🚀 Como Executar
+
+1. Clone o repositório:
+```bash
+git clone <url-do-repositorio>
+cd quiz
+```
+
+2. Instale as dependências:
+```bash
+npm install
+# ou
+yarn install
+# ou
+pnpm install
+```
+
+3. Execute o servidor de desenvolvimento:
 ```bash
 npm run dev
-# or
+# ou
 yarn dev
-# or
+# ou
 pnpm dev
-# or
+# ou
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Abra [http://localhost:3000](http://localhost:3000) no seu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Estrutura do Projeto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+quiz/
+├── public/              # Arquivos estáticos
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx   # Layout principal
+│   │   ├── page.tsx     # Página principal
+│   │   └── globals.css  # Estilos globais
+│   ├── components/
+│   │   ├── QuestionItem.tsx # Componente de pergunta
+│   │   └── Results.tsx      # Componente de resultados
+│   ├── data/
+│   │   └── questions.ts     # Lista de perguntas
+│   └── types/
+│       └── Questions.ts     # Tipos TypeScript
+├── package.json
+└── README.md
+```
 
-## Learn More
+## 🎯 Scripts Disponíveis
 
-To learn more about Next.js, take a look at the following resources:
+- `npm run dev` - Inicia o servidor de desenvolvimento com Turbopack
+- `npm run build` - Cria a build de produção com Turbopack
+- `npm run start` - Inicia o servidor de produção
+- `npm run lint` - Executa o linter ESLint
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📝 Como Usar
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. O quiz exibe uma pergunta por vez com múltiplas opções
+2. Clique em uma opção para selecionar sua resposta
+3. Após 2 segundos, o sistema mostra feedback visual (verde para acerto, vermelho para erro)
+4. A próxima pergunta é carregada automaticamente
+5. Ao finalizar todas as perguntas, a tela de resultados é exibida
+6. Clique em "Reiniciar Quiz" para começar novamente
 
-## Deploy on Vercel
+## 🔧 Personalização
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Para adicionar novas perguntas:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Edite o arquivo `src/data/questions.ts` e adicione um novo objeto:
+
+```typescript
+{
+    question: 'Sua pergunta aqui?',
+    options: [
+        'Opção 1',
+        'Opção 2',
+        'Opção 3',
+        'Opção 4'
+    ],
+    answer: 0  // Índice da resposta correta (0-3)
+}
+```
+
+## 👨‍💻 Autor
+
+Gabriel Lemos
