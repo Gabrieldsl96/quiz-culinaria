@@ -2,7 +2,7 @@
 
 Uma aplicação web moderna de quiz interativo construída com Next.js, React e TypeScript. Este projeto apresenta um quiz de culinária com sistema de perguntas e respostas, feedback visual e tela de resultados.
 
-🔗 **[Acesse o site aqui](https://quiz-culinaria.vercel.app/)**
+🔗 **[Acesse o site aqui](https://quiz-culinaria.gbcmtecnologia.com.br/)**
 
 ## ✨ Funcionalidades
 
